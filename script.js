@@ -1,16 +1,8 @@
 //your JS code here. If required.
-function updateDateTime() {
-  const dateTimeElement = document.getElementById("datetime");
-
-  // Create a Date object to get the current date and time
-  const currentDateTime = new Date();
-
-  // Update the content of the element with the current date and time
-  dateTimeElement.textContent = currentDateTime;
-}
-
-// Call the function to display the date and time initially
-updateDateTime();
-
-// Update the date and time every second (1000 milliseconds)
-setInterval(updateDateTime, 1000);
+function updateClock() {
+      var now = new Date();
+      var date = now.toDateString();
+      var time = now.toLocaleTimeString();
+      document.getElementById('timer').innerHTML = date + ', ' + time;
+    }
+    setInterval(updateClock, 1000);
